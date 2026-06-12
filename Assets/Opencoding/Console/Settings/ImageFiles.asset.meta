@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 86867d91245cf443bac0028b54878a6f
+timeCreated: 1443002193
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Settings/ImageFiles.asset
+  uploadId: 633328

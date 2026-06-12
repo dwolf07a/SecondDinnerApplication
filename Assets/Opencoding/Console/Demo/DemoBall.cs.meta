@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8360678352d7f4f8cbe1321c66766bc4
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Demo/DemoBall.cs
+  uploadId: 633328

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4c874c4723f2d408eb3dacf63c6aeffb
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Shared/Shared.asmdef
+  uploadId: 633328

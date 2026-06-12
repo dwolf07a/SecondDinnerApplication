@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 17ea4bb4e069a4026b2c9562ed4b2966
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Console/UI/Elements/TouchScreenInputField.cs
+  uploadId: 633328

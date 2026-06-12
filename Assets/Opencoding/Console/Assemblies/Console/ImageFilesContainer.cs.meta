@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ed407527d1ce6419e9ad81ea2f5c3f51
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Console/ImageFilesContainer.cs
+  uploadId: 633328

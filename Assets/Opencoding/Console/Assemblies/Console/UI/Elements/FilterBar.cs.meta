@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8b675b6a43d3e47339f9dc422cee9f59
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Console/UI/Elements/FilterBar.cs
+  uploadId: 633328

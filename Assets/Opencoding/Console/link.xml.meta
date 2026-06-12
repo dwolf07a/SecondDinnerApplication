@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 39e6ff65488434f7b83ec1dd554d6bed
+timeCreated: 1449760259
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/link.xml
+  uploadId: 633328

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 25df63ee2ef444262ae6b55c2cc3d1c6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Console/TouchDetectors/TouchDetector.cs
+  uploadId: 633328

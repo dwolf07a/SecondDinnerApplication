@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 1b04787d083164714bbd0f9efa4f3f8b
+TextScriptImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/EmailTemplates/LogEmailFooter.txt
+  uploadId: 633328

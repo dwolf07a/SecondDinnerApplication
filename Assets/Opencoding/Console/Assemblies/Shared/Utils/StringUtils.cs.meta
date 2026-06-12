@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ee39e91fe59f84c30bfa6e49529c318f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Shared/Utils/StringUtils.cs
+  uploadId: 633328

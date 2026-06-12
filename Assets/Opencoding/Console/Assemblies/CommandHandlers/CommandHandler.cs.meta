@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: baf9fd1972cc841d2bbef3ed011554fa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/CommandHandlers/CommandHandler.cs
+  uploadId: 633328

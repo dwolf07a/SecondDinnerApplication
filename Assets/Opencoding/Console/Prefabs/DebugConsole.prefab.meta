@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ff53b337b0164f18bcb202c89eee301
+labels:
+- Debug
+- Console
+- TouchConsole
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Prefabs/DebugConsole.prefab
+  uploadId: 633328

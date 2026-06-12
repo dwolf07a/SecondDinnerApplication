@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a6207425153ad4d448689efe5bcb3c11
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Console/UI/Utilities/ScreenshotCapture.cs
+  uploadId: 633328

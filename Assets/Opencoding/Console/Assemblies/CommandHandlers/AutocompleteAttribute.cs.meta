@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cd4f1cbc5aeed4313bb5d95972402618
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/CommandHandlers/AutocompleteAttribute.cs
+  uploadId: 633328

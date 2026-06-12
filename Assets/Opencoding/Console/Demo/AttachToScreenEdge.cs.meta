@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7fd342916c53946f5b08d2f2a8bb5451
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Demo/AttachToScreenEdge.cs
+  uploadId: 633328

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 90749205fd9114dbfa3c388b08591057
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Demo/BallMaterial.physicsMaterial2D
+  uploadId: 633328

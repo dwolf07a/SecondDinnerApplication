@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0b42a8ef0235d40e7b3c57a47c0f8f2f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Assemblies/Console/UI/Elements/SettingsOverlay.cs
+  uploadId: 633328

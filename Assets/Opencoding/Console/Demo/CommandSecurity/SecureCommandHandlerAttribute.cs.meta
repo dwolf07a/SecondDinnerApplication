@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 91d96c195d93a41a5b6c2886e1d21d9d
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25559
+  packageName: TouchConsole Pro
+  packageVersion: 3.0.0
+  assetPath: Assets/Opencoding/Console/Demo/CommandSecurity/SecureCommandHandlerAttribute.cs
+  uploadId: 633328
