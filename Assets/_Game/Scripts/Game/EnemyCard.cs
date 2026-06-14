@@ -61,9 +61,14 @@ public class EnemyCard : MonoBehaviour
 
         transform.SetParent(handSlot, true);
         _rectTransform.position = deckWorldPosition;
+        _rectTransform.localScale = Vector3.one;
 
-        yield return CardAnimation.MoveWorld(_rectTransform, handSlot.position, _dealDuration, _moveEasing);
-        _rectTransform.localPosition = Vector3.zero;
+        yield return CardAnimation.AnimateLocalState(
+            _rectTransform,
+            Vector3.zero,
+            Vector3.one,
+            _dealDuration,
+            _moveEasing);
     }
 
     public IEnumerator AnimatePlayToTable(Transform tableSlot)

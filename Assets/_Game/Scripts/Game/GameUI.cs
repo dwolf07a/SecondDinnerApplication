@@ -11,6 +11,10 @@ public class GameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _gameOverDetailText;
     [SerializeField] private Button _replayButton;
 
+    [Header("Game Over Text")]
+    [SerializeField] private string _perfectScoreDetailText = "You scored {0}/{1}. Now you know exactly what Neil would do, but there's so much more that he can bring to the table! Schedule an interview to learn more!";
+    [SerializeField] private string _belowPerfectScoreDetailText = "You scored {0}/{1}. Review the matchups and try again, or schedule an interview with Neil to learn more about his unique perspective.";
+
     void Awake()
     {
         if (_gameOverPanel != null)
@@ -44,13 +48,13 @@ public class GameUI : MonoBehaviour
             _gameOverPanel.SetActive(true);
 
         if (_gameOverTitleText != null)
-            _gameOverTitleText.text = isPerfect ? "Perfect Score!" : "The candidate can do better";
+            _gameOverTitleText.text = isPerfect ? "Perfect Score!" : "You can do better!";
 
         if (_gameOverDetailText != null)
         {
             _gameOverDetailText.text = isPerfect
-                ? $"You scored {score}/{maxScore}. Flawless live ops instincts."
-                : $"You scored {score}/{maxScore}. Review the matchups and try again.";
+                ? string.Format(_perfectScoreDetailText, score, maxScore)
+                : string.Format(_belowPerfectScoreDetailText, score, maxScore);
         }
     }
 

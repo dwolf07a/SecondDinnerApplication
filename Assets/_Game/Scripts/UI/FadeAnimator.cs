@@ -2,8 +2,9 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class TextAnimator : MonoBehaviour
+public class FadeAnimator : MonoBehaviour
 {
+    [SerializeField] private float _fadeInDelay = 0f;
     [SerializeField] private float _fadeInDuration = 0.75f;
     [SerializeField] private float _displayDuration = 3f;
     [SerializeField] private float _fadeOutDuration = 0.75f;
@@ -48,9 +49,19 @@ public class TextAnimator : MonoBehaviour
         _canvasGroup.alpha = 0f;
         _canvasGroup.blocksRaycasts = false;
 
+        if (_fadeInDelay > 0f)
+            yield return new WaitForSeconds(_fadeInDelay);
+
+        _canvasGroup.blocksRaycasts = true;
+
         yield return Fade(0f, 1f, _fadeInDuration, _fadeInEasing);
-        yield return new WaitForSeconds(_displayDuration);
-        yield return Fade(1f, 0f, _fadeOutDuration, _fadeOutEasing);
+
+        if (_displayDuration > 0f)
+        {
+            yield return new WaitForSeconds(_displayDuration);
+            yield return Fade(1f, 0f, _fadeOutDuration, _fadeOutEasing);
+            _canvasGroup.blocksRaycasts = false;
+        }
 
         if (_disableWhenComplete)
             gameObject.SetActive(false);

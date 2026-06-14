@@ -30,6 +30,18 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameUI _gameUI;
 
+    [Header("Status Text")]
+    [SerializeField] private string _setupStatus = "Dealing cards...";
+    [SerializeField] private string _aiChoosingStatus = "AI is choosing a card...";
+    [SerializeField] private string _aiPlayedStatus = "AI played {0}. Choose your response.";
+    [SerializeField] private string _playerTurnStatus = "Select the best response from your hand.";
+    [SerializeField] private string _playingCardStatus = "Playing your card...";
+    [SerializeField] private string _scoringStatus = "Scoring the round...";
+    [SerializeField] private string _perfectMatchStatus = "Perfect match! +{0} points.";
+    [SerializeField] private string _partialMatchSingularStatus = "Less than ideal. +{0} point.";
+    [SerializeField] private string _partialMatchPluralStatus = "Less than ideal. +{0} points.";
+    [SerializeField] private string _gameOverStatus = "Game over.";
+
     [Header("Card Prefabs")]
     [SerializeField] private GameObject[] _enemyCards;
     [SerializeField] private GameObject[] _playerCards;
@@ -163,7 +175,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SetupRoutine()
     {
-        SetState(GameState.Setup, "Dealing cards...");
+        SetState(GameState.Setup, _setupStatus);
         ClearBoard();
         _score = 0;
 
@@ -194,6 +206,9 @@ public class GameManager : MonoBehaviour
 
         Vector3 deckPosition = _deckOrigin.position;
 
+        Canvas.ForceUpdateCanvases();
+        yield return null;
+
         for (int i = 0; i < _enemyCards.Length; i++)
         {
             Transform enemySlot = _enemyHand.GetChild(i);
@@ -213,7 +228,7 @@ public class GameManager : MonoBehaviour
         {
             Transform playerSlot = _playerHand.GetChild(i);
 
-            PlayerCard playerCard = Instantiate(_playerCards[i], playerSlot).GetComponent<PlayerCard>();
+            PlayerCard playerCard = Instantiate(_playerCards[i], deckPosition, Quaternion.identity).GetComponent<PlayerCard>();
             playerCard.Initialize();
             _spawnedPlayerCards.Add(playerCard);
             _playerHandCards.Add(playerCard);
@@ -224,7 +239,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator AITurnRoutine()
     {
-        SetState(GameState.AITurn, "AI is choosing a card...");
+        SetState(GameState.AITurn, _aiChoosingStatus);
 
         if (_enemyHandCards.Count == 0)
         {
@@ -238,7 +253,7 @@ public class GameManager : MonoBehaviour
         _activeEnemyCard = _enemyHandCards[randomIndex];
         _enemyHandCards.RemoveAt(randomIndex);
 
-        SetState(GameState.AITurn, $"AI played {_activeEnemyCard.GetLabelText()}. Choose your response.");
+        SetState(GameState.AITurn, string.Format(_aiPlayedStatus, _activeEnemyCard.GetLabelText()));
 
         if (_enemyTableSlot != null)
             yield return _activeEnemyCard.AnimatePlayToTable(_enemyTableSlot);
@@ -249,7 +264,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator BeginPlayerTurn()
     {
-        SetState(GameState.PlayerTurn, "Select the best response from your hand.");
+        SetState(GameState.PlayerTurn, _playerTurnStatus);
         _isProcessingPlayerInput = false;
         EnablePlayerInput();
         yield break;
@@ -257,7 +272,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator PlayerTurnRoutine()
     {
-        SetState(GameState.PlayerTurn, "Playing your card...");
+        SetState(GameState.PlayerTurn, _playingCardStatus);
 
         if (_activePlayerCard == null)
         {
@@ -276,7 +291,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ScoringRoutine()
     {
-        SetState(GameState.Scoring, "Scoring the round...");
+        SetState(GameState.Scoring, _scoringStatus);
 
         bool isPerfect = _activePlayerCard != null
             && _activePlayerCard.IsPerfectTarget(_activeEnemyCard);
@@ -290,8 +305,8 @@ public class GameManager : MonoBehaviour
         SetState(
             GameState.Scoring,
             isPerfect
-                ? $"Perfect match! +{roundScore} points."
-                : $"Less than ideal. +{roundScore} point{(roundScore == 1 ? "" : "s")}.");
+                ? string.Format(_perfectMatchStatus, roundScore)
+                : string.Format(roundScore == 1 ? _partialMatchSingularStatus : _partialMatchPluralStatus, roundScore));
 
         yield return new WaitForSeconds(_scoringPause);
         yield return DestroyPlayedCards();
@@ -341,7 +356,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GameOverRoutine()
     {
-        SetState(GameState.GameOver, "Game over.");
+        SetState(GameState.GameOver, _gameOverStatus);
 
         bool isPerfect = _score >= PerfectTotalScore;
 

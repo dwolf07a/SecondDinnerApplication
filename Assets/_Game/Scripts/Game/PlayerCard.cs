@@ -136,6 +136,7 @@ public class PlayerCard : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
         transform.SetParent(handSlot, true);
         _rectTransform.position = deckWorldPosition;
+        _rectTransform.localScale = Vector3.one;
 
         yield return CardAnimation.MoveWorld(_rectTransform, handSlot.position, _dealDuration, _moveEasing);
         _rectTransform.localPosition = Vector3.zero;
