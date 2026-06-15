@@ -448,6 +448,16 @@ MonoBehaviour:
   _hoverEasing: 7
   _playCardButton: {fileID: 4852330833942280008}
   _perfectTarget: {fileID: 7045099373454778651, guid: 426dfcf74170ad443b36e860399eed70, type: 3}
+  _story: "When Neil was a Techncial Producer at Meta, PokerVR was seeing UA growth,
+    but conversions weren't keeping pace. After analysing cohort data, it became
+    clear that as the platform skewed younger with the release of the cheaper Quest
+    3S, those players were taking longer to convert, and their purchasing interests
+    did not match older players.  \n\nNeil put together a proposal that would a)
+    change  how and when those users were shown in-game items to purchase, and b)
+    prioritize the right items that would most likely appeal to each cohort. These
+    changes resulted in a 15% lift. \n\nBonus: If you schedule an interview with
+    Neil and he may tell you about the surprising best selling items on the Oculus
+    Quest Store."
 --- !u!1 &7974331249604064235
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +525,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Transaction Root Cause Analysis
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
+  m_sharedMaterial: {fileID: 4311439557710298882, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

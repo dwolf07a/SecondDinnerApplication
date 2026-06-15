@@ -372,6 +372,13 @@ MonoBehaviour:
   _hoverEasing: 7
   _playCardButton: {fileID: 8282873407067100578}
   _perfectTarget: {fileID: 7045099373454778651, guid: e65a341f6d0eb42448ee8bbbdd36142b, type: 3}
+  _story: "As a Technical Producer at Meta, Neil acted as one of the primary advocates
+    for developer feedback. He set up monthly \"Office Hours\" with the platform
+    PMs and Eng teams, and ensured the agenda always included a roadmap of upcoming
+    features. \n\nEvery Office Hours included discussion of that roadmap, and Neil
+    made sure PMs were clear on which changes would be the most valuable to the developer
+    community.\n\nBonus: If you schedule an interview with Neil and he may tell you
+    about what REALLY happend with the \"Metaverse\" and \"Legs\"!"
 --- !u!1 &7974331249604064235
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,8 +446,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Feature Cost Benefit Analysis
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
+  m_sharedMaterial: {fileID: 4311439557710298882, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

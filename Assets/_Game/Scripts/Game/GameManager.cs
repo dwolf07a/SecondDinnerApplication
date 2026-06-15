@@ -83,6 +83,8 @@ public class GameManager : MonoBehaviour
     private int _score;
     private Coroutine _stateRoutine;
     private bool _isProcessingPlayerInput;
+    private bool _waitingForStoryDone;
+    private bool _storyAcknowledged;
 
     public GameState CurrentState => _currentState;
 
@@ -123,8 +125,17 @@ public class GameManager : MonoBehaviour
 
         _activePlayerCard = card;
         _isProcessingPlayerInput = true;
+        _activePlayerCard.PrepareForStoryDisplay();
         DisablePlayerInput();
         StartStateRoutine(PlayerTurnRoutine());
+    }
+
+    public void OnStoryDone()
+    {
+        if (!_waitingForStoryDone)
+            return;
+
+        _storyAcknowledged = true;
     }
 
     public void RestartGame()
@@ -135,10 +146,13 @@ public class GameManager : MonoBehaviour
         _activeEnemyCard = null;
         _activePlayerCard = null;
         _isProcessingPlayerInput = false;
+        _waitingForStoryDone = false;
+        _storyAcknowledged = false;
 
         if (_gameUI != null)
         {
             _gameUI.HideGameOver();
+            _gameUI.HideStory();
             _gameUI.UpdateScore(_score, PerfectTotalScore);
         }
 
@@ -285,17 +299,9 @@ public class GameManager : MonoBehaviour
         if (_playerTableSlot != null)
             yield return _activePlayerCard.AnimatePlayToTable(_playerTableSlot);
 
-        yield return new WaitForSeconds(_turnPause);
-        StartStateRoutine(ScoringRoutine());
-    }
-
-    IEnumerator ScoringRoutine()
-    {
         SetState(GameState.Scoring, _scoringStatus);
 
-        bool isPerfect = _activePlayerCard != null
-            && _activePlayerCard.IsPerfectTarget(_activeEnemyCard);
-
+        bool isPerfect = _activePlayerCard.IsPerfectTarget(_activeEnemyCard);
         int roundScore = isPerfect ? PerfectMatchScore : PartialMatchScore;
         _score += roundScore;
 
@@ -308,7 +314,14 @@ public class GameManager : MonoBehaviour
                 ? string.Format(_perfectMatchStatus, roundScore)
                 : string.Format(roundScore == 1 ? _partialMatchSingularStatus : _partialMatchPluralStatus, roundScore));
 
-        yield return new WaitForSeconds(_scoringPause);
+        if (_gameUI != null)
+            _gameUI.ShowStory(_activePlayerCard.Story);
+
+        yield return WaitForStoryDone();
+
+        if (_gameUI != null)
+            _gameUI.HideStory();
+
         yield return DestroyPlayedCards();
 
         _activeEnemyCard = null;
@@ -319,6 +332,17 @@ public class GameManager : MonoBehaviour
             StartStateRoutine(GameOverRoutine());
         else
             StartStateRoutine(AITurnRoutine());
+    }
+
+    IEnumerator WaitForStoryDone()
+    {
+        _waitingForStoryDone = true;
+        _storyAcknowledged = false;
+
+        while (!_storyAcknowledged)
+            yield return null;
+
+        _waitingForStoryDone = false;
     }
 
     IEnumerator DestroyPlayedCards()
@@ -375,12 +399,15 @@ public class GameManager : MonoBehaviour
     void DisablePlayerInput()
     {
         foreach (PlayerCard card in _playerHandCards)
-            card.SetInputEnabled(false);
+            card.SetInputEnabled(false, resetHover: card != _activePlayerCard);
     }
 
     void ClearBoard()
     {
         DisablePlayerInput();
+
+        if (_gameUI != null)
+            _gameUI.HideStory();
 
         foreach (EnemyCard card in _spawnedEnemyCards)
         {
@@ -400,6 +427,8 @@ public class GameManager : MonoBehaviour
         _playerHandCards.Clear();
         _activeEnemyCard = null;
         _activePlayerCard = null;
+        _waitingForStoryDone = false;
+        _storyAcknowledged = false;
     }
 
     static string GetLabel(string[] labels, int index, string fallback)

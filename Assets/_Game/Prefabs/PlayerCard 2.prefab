@@ -448,6 +448,16 @@ MonoBehaviour:
   _hoverEasing: 7
   _playCardButton: {fileID: 3509466304845484093}
   _perfectTarget: {fileID: 7045099373454778651, guid: 3612a07e7483f6248a6e541dfc5f656e, type: 3}
+  _story: "As a Technical Producer at Meta, Neil made sure developers were aware
+    of changing requlatory requirements well in advance of any deadline. When an
+    age verification API was rolled out to game developers, Neil worked with those
+    developers to ensure their games complied with the platform and legal requirements.
+    This included making sure IAP was disbled for users under 13 and users on a children's
+    account. \n\nAs a result of this proactive approach, none of Neil's supported
+    developers were flagged by the Meta policy team, which would  have resulted in
+    a delisting from the Oculus Store. \n\nBonus: Schedule an interview with Neil
+    and he may tell you about why the Meta Policy team wanted to remove 3 years worth
+    of reviews for a certain game, and how Neil helped mitigate the fallout."
 --- !u!1 &7974331249604064235
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +525,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Payment Platform Relationship Management
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
+  m_sharedMaterial: {fileID: 4311439557710298882, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -540,8 +550,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

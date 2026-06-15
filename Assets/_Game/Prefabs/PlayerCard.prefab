@@ -448,6 +448,7 @@ MonoBehaviour:
   _hoverEasing: 7
   _playCardButton: {fileID: 2168407881179223414}
   _perfectTarget: {fileID: 7045099373454778651, guid: 6f659c43dbaee82488e1b165d59aec8a, type: 3}
+  _story: 
 --- !u!1 &7974331249604064235
 GameObject:
   m_ObjectHideFlags: 0

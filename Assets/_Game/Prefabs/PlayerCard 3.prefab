@@ -448,6 +448,15 @@ MonoBehaviour:
   _hoverEasing: 7
   _playCardButton: {fileID: 5759974893741796741}
   _perfectTarget: {fileID: 7045099373454778651, guid: 94ebcab5d3d71274d8fd94c7d4ebe9e4, type: 3}
+  _story: "As an External Technical Producer on Google Stadia, Neil supported multiple
+    3rd party developers as they ported their games to Linux and Vulkan, as per the
+    Stadia platform requirements. Working closely with 3rd party Lead Programmers
+    and Producers, Neil tracked development velocity and idnetified production risks.\n\nBy
+    flagging issues early, Neil was able to loop in Google Technical Solutions Engineers
+    to do deep dives on blocking issues before they impacted delivery deadlines.
+    \n\nBonus: Schedule an inerview with Neil and he may tell you about the time
+    he inherited a team that wasn't as transparent as it could have been... and how
+    he helped that team recover from near complete disaster."
 --- !u!1 &7974331249604064235
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +524,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Development Bottleneck Identification
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
+  m_sharedMaterial: {fileID: 4311439557710298882, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -540,8 +549,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

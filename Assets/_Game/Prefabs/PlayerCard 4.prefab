@@ -372,6 +372,20 @@ MonoBehaviour:
   _hoverEasing: 7
   _playCardButton: {fileID: 8154011825797178505}
   _perfectTarget: {fileID: 7045099373454778651, guid: 1f183792985a4ba4ca06cc37036439c0, type: 3}
+  _story: 'As a Technical Producer at Meta, Neil was responsible for the health of
+    4 of the top 10 live service games on the Oculus Quest Store. As AI tools became
+    readily available, Neil set up realtime monitoring and alerts for DAU, conversion
+    rates, and spending to flag any anomolies for both himself and the external Lead
+    Producers.
+
+
+    By taking a data driven approach, issues were caught and addressed
+    in near real time.
+
+
+    Bonus: Schedule an interview with Neil and he may tell
+    you about how he convinced a developer to NOT to implement a certain feature
+    in the game.'
 --- !u!1 &7974331249604064235
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,8 +453,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Realtime KPI Monitoring and Alerts
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
+  m_sharedMaterial: {fileID: 4311439557710298882, guid: 463d4d22e31f64c4fa0309bd7a3de8d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

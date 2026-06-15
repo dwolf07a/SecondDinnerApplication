@@ -24,14 +24,18 @@ public class PlayerCard : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     private RectTransform _rectTransform;
     private bool _inputEnabled;
     private bool _isHovered;
+    private bool _isStorySelected;
     private Vector3 _restLocalPosition = Vector3.zero;
     private Vector3 _restLocalScale = Vector3.one;
     private Coroutine _hoverRoutine;
 
     public string Label { get; private set; }
     [SerializeField] private EnemyCard _perfectTarget;
+    [SerializeField] [TextArea(3, 8)] private string _story;
     public bool IsInHand { get; private set; } = true;
     public bool IsOnTable { get; private set; }
+
+    public string Story => _story ?? string.Empty;
 
     void Awake()
     {
@@ -85,8 +89,21 @@ public class PlayerCard : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
             _canvasGroup.blocksRaycasts = enabled;
         }
 
-        if (!enabled && resetHover)
+        if (!enabled && resetHover && !_isStorySelected)
             ResetHoverImmediate();
+    }
+
+    public void PrepareForStoryDisplay()
+    {
+        StopHoverAnimation();
+        _isStorySelected = true;
+        _isHovered = true;
+        transform.SetAsLastSibling();
+        _rectTransform.localPosition = _restLocalPosition + _hoverLocalOffset;
+        _rectTransform.localScale = _restLocalScale * _hoverScale;
+
+        if (_playCardButton != null)
+            _playCardButton.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -105,7 +122,7 @@ public class PlayerCard : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (!_isHovered)
+        if (!_isHovered || _isStorySelected)
             return;
 
         _isHovered = false;
@@ -146,6 +163,8 @@ public class PlayerCard : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     public IEnumerator AnimatePlayToTable(Transform tableSlot)
     {
         StopHoverAnimation();
+        _isStorySelected = false;
+        _isHovered = false;
 
         IsInHand = false;
         IsOnTable = true;
@@ -169,6 +188,7 @@ public class PlayerCard : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void ResetForPool()
     {
+        _isStorySelected = false;
         ResetHoverImmediate();
         IsInHand = true;
         IsOnTable = false;
