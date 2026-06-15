@@ -602,18 +602,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Congratulations! You''ve launched an awesome game and scaled it, but a
-    hoarde of live operations monsters have appeared!
+  m_text: 'Congratulations! At Second Dinner, you''ve launched an awesome game and
+    scaled it, but a hoarde of live operations monsters have appeared and you''re
+    in the middle of building a new game!
 
 
-    Fortunately, you''ve
-    hired Neil, who puts the "Technical" into "Technical Producer" and he has an
-    aresenal at his disposal.
+    Fortunately, you''ve hired Neil,
+    who puts the "Technical" into "Technical Producer" and he has an amazing aresenal
+    at his disposal.
 
 
-    Start the game to learn about techniques he''s
-    actually used at both large companies (Meta, Google, PlayStation), and smaller
-    companies punching way above their weight!'
+    Start the game to learn about techniques he''s actually
+    used at both large companies (Meta, Google, PlayStation), and smaller companies
+    punching way above their weight!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
